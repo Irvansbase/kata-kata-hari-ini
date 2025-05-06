@@ -158,51 +158,65 @@
             { id: 57, text: "Kebahagiaan itu datang dari dalam, tapi makanan datang dari luar—lebih enak!" },
             { id: 58, text: "Saya kalau belajar, lebih suka pakai metode trial and error. Biasanya saya pilih error dulu." },
             { id: 59, text: "Saya lebih suka pagi hari yang dingin, karena itu kesempatan terbaik buat tidur lagi." },
-            { id: 60, text: "Saya bukan pekerja keras, saya pekerja yang susah banget bangun pagi." }
+            { id: 60, text: "Saya bukan pekerja keras, saya pekerja yang susah banget bangun pagi." },
+            { id: 61, text: "Aku nggak malas, aku cuma lagi fokus nyari cara biar nggak kerja." },
+            { id: 62, text: "Kehidupan itu kayak remote TV, kadang kita harus nge-klik tombol pause." },
+            { id: 63, text: "Aku nggak suka drama, kecuali itu drama keuangan di rekeningku." },
+            { id: 64, text: "Mereka bilang jangan hidup di masa lalu, tapi kok aku masih inget tagihan kemarin?" },
+            { id: 65, text: "Kalo hidup itu permainan, aku lagi stuck di level pertama, tapi tetep santai." },
+            { id: 66, text: "Tanya apa? Aku cuma ahli dalam menemukan alasan untuk nggak bangun pagi." },
+            { id: 67, text: "Aku yakin kalau hidup itu penuh warna, tapi dompetku cuma satu warna: hitam." },
+            { id: 68, text: "Mereka bilang kerja keras itu penting, tapi tidur itu lebih penting." },
+            { id: 69, text: "Aku coba diet, tapi di tengah perjalanan, aku kehabisan energi… dan nyari makanan." },
+            { id: 70, text: "Aku nggak takut gagal, yang aku takutkan adalah gagal nonton film malam ini." },
+            { id: 71, text: "Hidup ini penuh tantangan, tapi yang paling menantang adalah ngadepin alarm pagi." },
+            { id: 72, text: "Aku mikir hidup ini seperti game, tapi kayaknya aku butuh cheat code buat level kerja." },
+            { id: 73, text: "Bekerja keras itu penting, tapi tidur siang itu lebih berharga." },
+            { id: 74, text: "Aku nggak takut masa depan, aku cuma takut kalau nggak bisa dapet sinyal WiFi." },
+            { id: 75, text: "Aku bilang kerja keras itu penting, tapi sekarang lebih fokus cari tempat duduk yang nyaman." },
+            { id: 76, text: "Kehidupan itu kayak ujian, kadang jawabannya salah, tapi tetap harus dihadapi." },
+            { id: 77, text: "Aku kira diet itu mudah, tapi ternyata lebih sulit dari menunggu WiFi nyambung." },
+            { id: 78, text: "Sukses itu kayak pacar—kalau udah deket, tiba-tiba hilang pas butuh." },
+            { id: 79, text: "Masa depan itu nggak jelas, tapi saldo rekeningku lebih nggak jelas lagi." },
+            { id: 80, text: "Aku nggak butuh motivasi, aku butuh koneksi internet yang stabil." }
+
         ];
 
         $(document).ready(function() {
-            // Initialize tooltips
+
             const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
             tooltipTriggerList.map(function (tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl);
             });
 
-            // Set initial joke ID
             $("#joke-id").text("#1");
 
             $("#btn").click(function() {
-                // Disable button during transition
+
                 $(this).prop("disabled", true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...');
-                
-                // Random joke selection
+
                 const randomIndex = Math.floor(Math.random() * jokes.length);
                 const randomJoke = jokes[randomIndex];
                 
-                // Animate card
                 $(".joke-card").addClass("animate__animated animate__fadeIn");
                 
-                // Update content after animation starts
                 setTimeout(() => {
                     $("#hasil").text(randomJoke.text);
                     $("#joke-id").text("#" + randomJoke.id);
                     
-                    // Random cat image (1-10)
                     const catNum = Math.floor(Math.random() * 10) + 1;
                     const catStr = catNum < 10 ? "0" + catNum : catNum;
                     $('#gambar').attr('src', `https://www.animatedimages.org/data/media/209/animated-cat-image-00${catStr}.gif`);
                     
-                    // Re-enable button
                     $("#btn").prop("disabled", false).html('~ Pencet Lagi :V ~');
                     
-                    // Remove animation class
+
                     setTimeout(() => {
                         $(".joke-card").removeClass("animate__animated animate__fadeIn");
                     }, 500);
                 }, 300);
             });
 
-            // Copy to clipboard functionality
             $("#copy-btn").click(function() {
                 const jokeText = $("#hasil").text();
                 navigator.clipboard.writeText(jokeText).then(() => {
@@ -213,7 +227,7 @@
                 });
             });
 
-            // Handle image error
+
             $('#gambar').on('error', function() {
                 $(this).attr('src', 'https://www.animatedimages.org/data/media/209/animated-cat-image-0010.gif');
             });
