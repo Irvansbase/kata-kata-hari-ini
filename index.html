@@ -6,24 +6,108 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-</head>
+    </head>
 <body class="bg-light">
     
     <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
         <h1 class="mb-5">Kata Kata Hari Ini</h1>
         <div class="card">
-            <div class="card-body d-flex flex-column align-items-center">
+            <div class="card-body d-flex flex-column align-items-center" style="width: 400px; height: 400px; display: flex; justify-content: center; align-items: center;">
                 <div id="A">
-                    <img src="https://www.animatedimages.org/data/media/209/animated-cat-image-0010.gif" alt="Animated Cat" class="card-img-top" width="100">
+                    <img src="https://www.animatedimages.org/data/media/209/animated-cat-image-0010.gif" alt="Animated Cat" class="card-img-top" width="100" id="gambar">
                 </div>
-                <div id="B" class="card-text mt-3" style="max-width: 400px; text-align: center;">
+                <div id="hasil" class="card-text mt-3" style="max-width: 400px; height: 150px; text-align: center; display: flex; justify-content: center; align-items: center;">
                     Kadang aku ngerasa hidup ini kayak sinetron. Bedanya, kalau sinetron ada sutradaranya, hidupku kayaknya dipegang admin magang.
                 </div>
             </div>
         </div>
-        <button id="btn" type="button" class="btn btn-dark mt-5 hover:bg-green-500">Generate</button>
+        <button id="btn" type="button" class="btn btn-dark mt-5 hover:bg-green-500">Pencet Aku :V</button>
+        <h6 class="mt-5 h6">@Andriirv</h6>
     </div>
 
+    
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        const jokes = [
+    { id: 1, text: "Kadang aku ngerasa hidup ini kayak sinetron. Bedanya, kalau sinetron ada sutradaranya, hidupku kayaknya dipegang admin magang." },
+    { id: 2, text: "Niat kerja biar sukses, ujung-ujungnya nunggu gajian sambil nahan emosi dan overthinking berjamaah." },
+    { id: 3, text: "Bukan nggak bisa move on, cuma lagi betah jadi warga negara kesepian." },
+    { id: 4, text: "Katanya jangan mikirin yang nggak pasti. Tapi dia, tetep aku pikirin. Padahal udah pasti nggak milik aku." },
+    { id: 5, text: "Kopi udah pahit, hidup juga pahit. Ya udah deh, tinggal tambahin senyum palsu biar komplit." },
+    { id: 6, text: "Bukan nggak semangat, cuma semangatnya nyangkut di kasur tiap pagi." },
+    { id: 7, text: "Kamu nanya? Kamu nanya? Iya, aku nanya, tapi ke diri sendiri: Kenapa sih hidup gini-gini aja?" },
+    { id: 8, text: "Susah tidur bukan insomnia. Cuma banyak pikiran, terus mikirin kenapa banyak pikiran." },
+    { id: 9, text: "Aku udah kayak Excel, banyak formula, tapi tetep error." },
+    { id: 10, text: "Kamu bilang aku childish. Lah emang aku belum dibayar lunas buat jadi dewasa sepenuhnya." },
+    { id: 11, text: "Sukses itu bukan soal kaya. Tapi soal bisa beli es kopi susu tanpa mikir saldo." },
+    { id: 12, text: "Mungkin aku gak spesial di matamu, tapi setidaknya aku spesial di kasurku tiap weekend." },
+    { id: 13, text: "Kalau dunia ini panggung sandiwara, aku udah jadi aktor utama dalam drama Nahan Marah Biar Tetap Profesional." },
+    { id: 14, text: "Kerja tuh gak berat. Yang berat tuh pura-pura semangat pas zoom meeting jam 9 pagi." },
+    { id: 15, text: "Pernah gak sih pengen istirahat 5 menit, terus kebangun 5 tahun kemudian?" },
+    { id: 16, text: "Hidup tuh kayak WiFi tetangga. Ada, tapi gak bisa konek." },
+    { id: 17, text: "Kalau sabar itu ada batasnya, berarti aku udah lewat batas, tinggal nunggu meledak." },
+    { id: 18, text: "Katanya jodoh pasti bertemu. Tapi kalau aku terus di kamar, gimana mau ketemu?" },
+    { id: 19, text: "Hati-hati sama orang yang suka bilang terserah. Biasanya itu adalah awal dari kerusuhan batin." },
+    { id: 20, text: "Aku bukan toxic, aku cuma overprotective… sama ego sendiri." },
+    { id: 21, text: "Cintaku padamu kayak scroll TikTok—gak sadar udah jam 3 pagi." },
+    { id: 22, text: "Kadang kita bukan susah hidup, tapi terlalu berharap hidup kayak konten reels." },
+    { id: 23, text: "Jadi dewasa tuh bukan soal umur, tapi soal ngadepin masalah tanpa voucher diskon." },
+    { id: 24, text: "Aku gak cari yang sempurna, cukup yang bisa balas chat tanpa delay 3-5 bisnis day." },
+    { id: 25, text: "Ketika dunia menyuruhmu untuk bangkit, tapi kasurmu bilang: tidur dulu napa, cape kan?" },
+    { id: 26, text: "Bukan gue yang drama, hidup aja yang naskahnya kayak FTV Indosiar." },
+    { id: 27, text: "Terlalu sering kuat, sampai lupa rasanya jadi manusia biasa yang boleh ngeluh." },
+    { id: 28, text: "Kalau hidup ini game, berarti aku stuck di level: Ngapain sih gue di dunia ini?" },
+    { id: 29, text: "Orang bilang rezeki gak ke mana, tapi kenapa uang jajan cepet banget ilang?" },
+    { id: 30, text: "Cinta itu buta, tapi dompet tetap bisa lihat harga cabe naik." },
+    { id: 31, text: "Saya mulai diet kemarin. Satu-satunya yang hilang adalah semangat saya." },
+    { id: 32, text: "Pernah denger gak sih, 'Kita itu kaya badut'? Iya, karena semua masalah cuma bisa ditertawain." },
+    { id: 33, text: "Saya suka olahraga. Tapi olahraga yang gak bikin keringat. Seperti joget TikTok." },
+    { id: 34, text: "Saya bingung kenapa orang bilang 'waktu itu uang'. Kalau waktu itu uang, saya pasti udah kaya, soalnya saya sering terlambat." },
+    { id: 35, text: "Kedua orangtua saya selalu bilang, 'Bekerjalah keras, Nak, biar sukses!' Sekarang saya ngerti, mereka cuma pengen saya gak banyak di rumah." },
+    { id: 36, text: "Saya pengen jadi orang sukses, tapi ternyata jalan menuju sukses itu lebih banyak macetnya." },
+    { id: 37, text: "Dulu saya pengen jadi astronaut. Tapi setelah ngerasain macet, saya rasa mendingan saya terbang di atas mobil aja." },
+    { id: 38, text: "Pernah coba diet? Tapi sepertinya saya lebih suka makanan yang 'sehat'... Seperti pizza." },
+    { id: 39, text: "Saya bukan malas, saya cuma menghargai waktu untuk berpikir." },
+    { id: 40, text: "Saya suka ngobrol sama diri sendiri. Sayangnya, saya lebih sering kalah debat." },
+    { id: 41, text: "Saya mulai nge-gym, tapi yang saya latih cuma jari. Jadi, sekarang saya ahli banget ngetik." },
+  { id: 42, text: "Kenapa ya, setiap kali saya bilang 'mau diet', hasilnya malah jadi makan berlapis-lapis?" },
+  { id: 43, text: "Pernah lihat orang yang suka bilang, 'Saya bukan pemalas, saya cuma butuh waktu untuk merencanakan masa depan.'" },
+  { id: 44, text: "Saya benci olahraga. Rasanya lebih menyenangkan kalau olahraga cuma nonton di TV." },
+  { id: 45, text: "Salah satu alasan kenapa saya suka tidur adalah karena tidur itu tidak pernah mengecewakan saya." },
+  { id: 46, text: "Mungkin saya nggak pandai matematika, tapi saya cukup paham kalau 1 + 1 = dua kali lipat lebih banyak makanan." },
+  { id: 47, text: "Orang bilang, 'Kalau mau sukses, jangan takut gagal.' Tapi kalau gagal terus, berarti saya nggak sukses-sukses dong?" },
+  { id: 48, text: "Dulu saya pengen jadi atlet. Tapi akhirnya saya sadar, saya lebih jago makan daripada olahraga." },
+  { id: 49, text: "Kata orang, 'Jangan terlalu banyak main HP.' Tapi HP saya jawab, 'Ini kan kerjaan saya!'" },
+  { id: 50, text: "Tiap kali saya bilang 'mau diet', saya berasa kayak pesulap yang bisa menghilangkan semangat diri sendiri." },
+  { id: 51, text: "Saya mencoba meditasi, tapi yang saya dapetin malah tidur siang gratis." },
+  { id: 52, text: "Saya nggak mau punya banyak uang, yang penting punya banyak cemilan." },
+  { id: 53, text: "Cinta itu buta, tapi aplikasi ojek online itu bisa lihat mana yang paling dekat." },
+  { id: 54, text: "Saya bukan malas, saya cuma menghargai waktu yang saya punya buat berpikir tentang makan." },
+  { id: 55, text: "Kenapa saya lebih sering ngedownloading aplikasi dibandingkan menjalani hidup?" },
+  { id: 56, text: "Saya pikir dunia ini adil, sampai saya lihat piring nasi saya yang cuma ada dua sendok." },
+  { id: 57, text: "Kebahagiaan itu datang dari dalam, tapi makanan datang dari luar—lebih enak!" },
+  { id: 58, text: "Saya kalau belajar, lebih suka pakai metode trial and error. Biasanya saya pilih error dulu." },
+  { id: 59, text: "Saya lebih suka pagi hari yang dingin, karena itu kesempatan terbaik buat tidur lagi." },
+  { id: 60, text: "Saya bukan pekerja keras, saya pekerja yang susah banget bangun pagi." }
+  ];
+
+  
+  
+  $(function () {
+    $("#btn").click(function () {
+
+        const randomIndex = Math.floor(Math.random() * jokes.length);
+        const randomJoke = jokes[randomIndex];
+        $("#hasil").text(randomJoke.text);
+
+        
+        const angkaRandom = Math.floor(Math.random() * (100 - 10 + 1)) + 10;
+        let imgUrl = `https://www.animatedimages.org/data/media/209/animated-cat-image-00${angkaRandom}.gif`;
+        $('#gambar').attr('src', imgUrl);
+        
+      });
+  });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
