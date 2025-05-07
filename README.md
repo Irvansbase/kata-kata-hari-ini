@@ -1,77 +1,117 @@
-A fun and interactive web application that displays random jokes/quotes with cute cat animations. Built with jQuery, Bootstrap, and CSS.
+Berikut terjemahan dalam Bahasa Indonesia untuk dokumentasi proyek tersebut:
 
-✨ Features
-🎲 Random joke generator
+---
 
-🐱 Animated cat GIFs
+## 🐱 Aplikasi Web Interaktif yang Menampilkan Lelucon/Kutipan Acak dengan Animasi Kucing Lucu
 
-📱 Fully responsive design
+Dibuat menggunakan **jQuery**, **Bootstrap**, dan **CSS**.
 
-📋 Copy to clipboard functionality
+---
 
-✨ Smooth animations and transitions
+### ✨ Fitur
 
-🌈 Attractive UI with Bootstrap
+* 🎲 Generator lelucon acak
+* 🐱 Animasi kucing berbentuk GIF
+* 📱 Desain sepenuhnya responsif
+* 📋 Fitur salin ke clipboard
+* ✨ Animasi dan transisi yang halus
+* 🌈 Tampilan menarik berkat Bootstrap
 
-🛠️ Technologies Used
-jQuery
-Bootstrap
-CSS3
-HTML5
+---
 
-🚀 Installation
-No installation needed! Just visit the live demo:
+### 🛠️ Teknologi yang Digunakan
 
+* jQuery
+* Bootstrap
+* CSS3
+* HTML5
 
-https://jokes-kata.vercel.app/
-For local development:
+---
 
-Clone the repository:
+### 🚀 Instalasi
 
-git clone https://github.com/yourusername/jokes-kata.git
-Open index.html in your browser
+**Tidak perlu instalasi!** Langsung kunjungi demo-nya di:
 
-🎨 UI Components
-Component	Description
-Card	Joke display card with cat animation
-Button	Interactive button to generate new jokes
-Footer	Clean footer with social links
+🔗 [https://jokes-kata.vercel.app/](https://jokes-kata.vercel.app/)
 
-📝 Code Structure
+#### Untuk pengembangan lokal:
+
+1. Clone repositori:
+
+   ```bash
+   git clone https://github.com/yourusername/jokes-kata.git
+   ```
+
+2. Buka `index.html` di browser kamu.
+
+---
+
+### 🎨 Komponen UI
+
+| Komponen   | Deskripsi                                        |
+| ---------- | ------------------------------------------------ |
+| **Kartu**  | Tampilan lelucon dengan animasi kucing           |
+| **Tombol** | Tombol interaktif untuk menampilkan lelucon baru |
+| **Footer** | Bagian bawah halaman dengan tautan media sosial  |
+
+---
+
+### 📝 Struktur Kode
+
+```
 jokes-kata/
-├── index.html          # Main HTML file
-├── style.css           # Custom CSS styles
-├── script.js           # jQuery functionality
-└── README.md           # This documentation
+├── index.html          # File HTML utama
+├── style.css           # Gaya CSS khusus
+├── script.js           # Fungsi jQuery
+└── README.md           # Dokumentasi proyek
+```
 
-🤝 Contributing
-Contributions are welcome! Please follow these steps:
+---
 
-Fork the project
+### 🤝 Kontribusi
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+Kontribusi sangat diterima! Ikuti langkah-langkah berikut:
 
-Commit your changes (git commit -m 'Add some amazing feature')
+1. Fork proyek ini
+2. Buat branch fitur baru
 
-Push to the branch (git push origin feature/AmazingFeature)
+   ```bash
+   git checkout -b fitur/FiturMenarik
+   ```
+3. Commit perubahan kamu
 
-Open a Pull Request
+   ```bash
+   git commit -m 'Tambah fitur menarik'
+   ```
+4. Push ke branch tersebut
 
-📜 License
-Distributed under the MIT License. See LICENSE for more information.
+   ```bash
+   git push origin fitur/FiturMenarik
+   ```
+5. Buat Pull Request
 
-📧 Contact
-Andri Irvandi - @yourtwitter - your-email@example.com
+---
 
-Project Link: https://github.com/yourusername/jokes-kata
+### 📜 Lisensi
 
-🙏 Acknowledgments
-Animated Cat Images
+Didistribusikan dengan Lisensi MIT. Lihat file `LICENSE` untuk info selengkapnya.
 
-Bootstrap
+---
 
-jQuery
+### 📧 Kontak
 
-Shields.io for badges
+**Andri Irvansyah** – [Irvans2731@gmail.com](mailto:Irvans2731@gmail.com)
 
-<p align="center"> Made with ❤️ and 😺 animations </p>
+🔗 **Tautan Proyek**: [https://github.com/Irvansbase/kata-kata-hari-ini](https://github.com/Irvansbase/kata-kata-hari-ini)
+
+---
+
+### 🙏 Penghargaan
+
+* Gambar animasi kucing
+* Bootstrap
+* jQuery
+* Shields.io untuk badge
+
+<p align="center"> Dibuat dengan ❤️ dan animasi 😺 </p>
+
