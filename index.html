@@ -204,7 +204,7 @@
                     $("#hasil").text(randomJoke.text);
                     $("#joke-id").text("#" + randomJoke.id);
                     
-                    const catNum = Math.floor(Math.random() * 10) + 1;
+                    const catNum = Math.floor(Math.random() * (100 - 10 + 1)) + 10;
                     const catStr = catNum < 10 ? "0" + catNum : catNum;
                     $('#gambar').attr('src', `https://www.animatedimages.org/data/media/209/animated-cat-image-00${catStr}.gif`);
                     
