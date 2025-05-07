@@ -39,7 +39,7 @@ Dibuat menggunakan **jQuery**, **Bootstrap**, dan **CSS**.
 1. Clone repositori:
 
    ```bash
-   git clone https://github.com/yourusername/jokes-kata.git
+   git clone https://github.com/Irvansbase/kata-kata-hari-ini
    ```
 
 2. Buka `index.html` di browser kamu.
